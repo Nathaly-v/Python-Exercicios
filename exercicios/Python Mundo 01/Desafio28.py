@@ -20,19 +20,19 @@ while True:
 
     
         
-    n1=int(input(blue + ' - Em que número eu pensei ?  '+ normal))
+    n1=int(input(purple + ' - Em que número eu pensei ?  '+ normal))
 
     computador= randint(0,5)
 
-    print (('.'*10) + purple + 'PROCESSANDO' + normal + ( '.'*10))
+    print (('.'*10) + yellow + 'PROCESSANDO' + normal + ( '.'*10))
     sleep(2)
     if n1 == computador:
-        print(green + f' - PARABÉNS !! Você conseguiu me vencer'+ normal )
+        print(purple + f' - PARABÉNS !! Você conseguiu me vencer'+ normal )
         
     else:
-        print(red + f' - Ganhei, EU pensei {computador} e não em : {n1}' +normal )
+        print(yellow + f' - Ganhei, EU pensei {computador} e não em : {n1}' +normal )
 
-    op= input ( green+'[?] - DESEJA CONTINUAR? [S/N]: '+ normal ).strip().upper()[0]
+    op= input ( purple+'[?] - DESEJA CONTINUAR? [S/N]: '+ normal ).strip().upper()[0]
     if op == 'N':
         break
 end = input('\n\n Pressione ENTER para sair...')

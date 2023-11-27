@@ -3,7 +3,7 @@
 import pygame
 
 pygame.mixer.init()
-pygame.mixer.music.load('eusou.mp3')
+pygame.mixer.music.load('midia/eusou.mp3')
 pygame.mixer.music.play()
 
 teste=input('')
