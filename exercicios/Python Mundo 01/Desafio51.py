@@ -2,14 +2,17 @@
 
 print (' 10 TERMOS DE UMA P.A.')
 
-termo = int (input( 'Primeiro termo : '))
-razao =  int (input( 'Razão : '))
+termo = int(input( 'Primeiro termo : '))
+razao =  int(input( 'Razão : '))
 cont = 0
-soma= 0
-for numero in range (termo ,999, razao) : 
-    if cont == 999:
-        
-    
+
+
+for numero in range(termo ,999, razao) : 
+    if cont == 10:
         break
-print (numero, end= ' ↦ ')     
+    cont = cont +  1
+  
+    print(f'{numero} ', end= ' ↦ ')    
+
+print( 'acabou' ) 
 
