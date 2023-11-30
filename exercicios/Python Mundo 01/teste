@@ -1,0 +1,8 @@
+
+cont = 0
+for numero in range ( 0, 100) :
+    if cont > 0 or numero <  10:
+    
+        print (numero)
+        
+  
