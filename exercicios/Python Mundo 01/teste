@@ -1,16 +1,18 @@
 
 
-for pessoa in range (1, 3):
+for pessoa in range (1, 5 + 1):
     peso= float(input('Digite um peso'))
-    
-    if peso >= peso:
+    if pessoa == 1:
+        maiorPeso=peso
+        menorPeso=peso
+    elif peso > maiorPeso:
         
-        maior= peso 
+        maiorPeso= peso 
     
-    elif peso < peso:
+    elif peso < menorPeso:
         
-        menor= peso
+        menorPeso= peso
     
-print (f'maior {maior}')
+print (f'maior {maiorPeso}')
 
-print (f' menor {menor}')
+print (f' menor {menorPeso}')

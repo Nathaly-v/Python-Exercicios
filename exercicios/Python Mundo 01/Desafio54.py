@@ -4,7 +4,7 @@ cont= 0
 cont2=0
 atual= date.today().year
 for c in range(1, 7+1):
-    pessoa = int (input(f' Em que ano a {c}° pessoa nasceu ? '))
+    pessoa = int (input(f' Em que ano a {c}º pessoa nasceu ? '))
     idade= atual - pessoa
     if idade >= 21: 
         cont += 1
