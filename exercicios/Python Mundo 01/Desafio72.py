@@ -2,11 +2,11 @@
 
 numerosPorExtenso = ('Zero', 'Um','Dois','Três','Quatro','Cinco','Seis','Sete','Oito','Nove','Dez','Onze','Doze','Treze','Quatorze','Quinze','Dezesseis','Dezessete','Dezoito','Dezenove','Vinte')
 
-for cont in range(0, (numerosPorExtenso)):
+for cont in range(0,len(numerosPorExtenso)):
     opNumeros= int(input(' Digite um número entre 0 e 20: '))
     if opNumeros >= 0 and opNumeros <= 20:
         print(f'{numerosPorExtenso[opNumeros]}')
     else:
         print('Tente novamente.', end = '')
      
-        
+            
