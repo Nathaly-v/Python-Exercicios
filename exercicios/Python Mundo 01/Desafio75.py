@@ -3,21 +3,30 @@
 #A) Quantas vezes apareceu o valor 9.
 #B) Em que posição foi digitado o primeiro valor 3.
 #C) Quais foram os números pares.
-par = 0
-cont = 0
-cont9 = 0
 
-op1=int(input(' Digite um número: '))
-op2=int(input(' Digite outro número: '))
-op3=int(input(' Digite mais um número: '))
-op4=int(input(' Digite o último número: '))
-    
+cont3 = 0
+text = ""
+
+while True:
+    op1=int(input(' Digite um número: '))
+    op2=int(input(' Digite outro número: '))
+    op3=int(input(' Digite mais um número: '))
+    op4=int(input(' Digite o último número: '))
+    break
+
 numeros = (op1, op2, op3, op4)
-
-posicao = numeros.index(3)
-
+if 3 in numeros:
+    cont3 = numeros.index(3) + 1
+    text = f' O valor 3 apareceu na {cont3}ª posição'
+else:
+    text = f' O valor 3 não apareceu em nenhuma posição'
 
 print(f'Você digitou os valores {numeros}')
-print(f' O valor 9 apareceu {cont9} vezes.')
-print(f' O valor 3 apareceu na {posicao +1} posição.')
-print(f' Os valores pares digitados foram {par}')
+print(f' O valor 9 apareceu {numeros.count(9)} vezes.')
+print(f'{text}')
+print(f' Os valores pares digitados foram: ', end = ' ')
+for number in numeros:
+    if number % 2 ==0:
+        print(number, end = ' ')
+    else:
+        pass
