@@ -1,0 +1,16 @@
+# Abre o arquivo para leitura
+with open("Treino/info.txt", "r") as arquivo:
+ 
+    linhas = arquivo.readlines()
+
+
+soma = 0
+
+
+for linha in linhas:
+   
+    numeros = linha.strip().split()
+   
+    soma += sum(map(int, numeros))
+
+print("A soma dos números no arquivo é:", soma)
