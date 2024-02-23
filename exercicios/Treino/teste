@@ -1,16 +1,13 @@
-# Abre o arquivo para leitura
-with open("Treino/info.txt", "r") as arquivo:
- 
-    linhas = arquivo.readlines()
+import re
+        
+def analisaNome(nome):       
+    return bool(re.match('^[a-zA-ZÀ-ÿ\s]+$', nome))
 
-
-soma = 0
-
-
-for linha in linhas:
-   
-    numeros = linha.strip().split()
-   
-    soma += sum(map(int, numeros))
-
-print("A soma dos números no arquivo é:", soma)
+nome = input ('\nDigite o seu nome completo : ').strip().upper()
+resultadoNome = analisaNome(nome)
+if resultadoNome == True:
+    pass
+else:
+    while resultadoNome == False:
+        nome = input(' \nErro! Digite novamente: ').strip().upper()  
+        resultadoNome = analisaNome(nome)

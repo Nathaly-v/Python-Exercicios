@@ -1,0 +1,12 @@
+def tem_numeros(texto):
+    for caractere in texto:
+        if caractere.isdigit():
+            return True
+    return False
+
+# Exemplo de uso:
+entrada = input("Digite algo: ")
+if tem_numeros(entrada):
+    print("A entrada contém números.")
+else:
+    print("A entrada não contém números.")
