@@ -1,10 +1,30 @@
-numeros = list()
 
 
-for _ in range (0, 5):
-    numero = int(input('Digite um valor: '))
-    numeros.append(numero)
-    
-numeros.sort()
+pessoa = list()
+pessoas = list()
+cont=0
+numeroMaior = 0
+numeroMenor = 0
+nomeMaior=''
+nomeMenor=''
+for i in range(0, 1):
+    pessoa.append(input('Nome: '))
+    pessoa.append(input('Idade: '))
+    cont +=1
+    pessoa.clear()
+pessoas.append(pessoa[:])
+for p in pessoas:
+    if cont == 1:
+        numeroMaior = p[1]
+        numeroMenor = p[1]
+        nomeMaior=p[0]
+        nomeMenor=p[0]
+    elif p > numeroMaior:
+        numeroMaior = p[1]
+        nomeMaior=p[0]
+    elif p < numeroMenor:
+        numeroMenor = p[1]
+        nomeMenor=p[0]
 
-print(numeros)
+print(f'{numeroMaior} e {nomeMaior}')
+print(f'{numeroMenor} e {nomeMenor}')
