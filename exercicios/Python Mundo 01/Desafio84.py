@@ -5,34 +5,38 @@
 pessoas = list()
 pessoasTudo= list()
 contPessoas= 0
-maiorPeso= 0
-menorPeso= 0
-nomeMaiorPeso = ''
-nomeMenorPeso = ''
+maiorPeso= float('-inf')
+menorPeso= float('inf')
+
+nomeMaiorPeso = list()
+nomeMenorPeso = list()
+
 print(' ----------+ CADASTRO +----------')
 while True:
-    pessoas.append(input(' Nome: '))
-    pessoas.append(int(input(' Peso: ')))
-    contPessoas += 1
+    
+    nome=input(' Nome: ')
+    peso=int(input(' Peso: '))
+    
+    pessoas.append(nome)
+    pessoas.append(peso)      
     pessoasTudo.append(pessoas[:])
     pessoas.clear()
+    contPessoas += 1
+
+    if peso > maiorPeso:
+        maiorPeso = peso
+        nomeMaiorPeso=[nome]
+    elif peso == maiorPeso:
+        nomeMaiorPeso.append(nome)
+    if peso < menorPeso:
+        menorPeso= peso
+        nomeMenorPeso=[nome]
+    elif peso == menorPeso:
+        nomeMenorPeso.append(nome)
+
     saida = input(' Deseja continuar? [ S/N ]: ').upper()
     if saida == 'N':
         break
-for p in pessoasTudo:
-    if contPessoas == 1:
-        maiorPeso = p[1]
-        menorPeso = p[1]
-        nomeMaiorPeso = p[0]
-        nomeMenorPeso = p[0]
-    else:
-        if p[1] > maiorPeso:
-            maiorPeso = p[1]
-            nomeMaiorPeso = p[0]
-        elif p[1] < menorPeso:
-            menorPeso = p[1]
-            nomeMenorPeso = p[0]
-
 
 print(f' Ao todo, você cadastrou {contPessoas} pessoas.')   
 print(f' O maior peso foi de {maiorPeso}.0Kg. Peso de {nomeMaiorPeso} ')

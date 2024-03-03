@@ -1,30 +1,13 @@
+import random
+import string
+jogos= list()
 
+def geraradorAleatorio():   
+    seisNumeros=''.join(random.choices(string.digits, k=6))
 
-pessoa = list()
-pessoas = list()
-cont=0
-numeroMaior = 0
-numeroMenor = 0
-nomeMaior=''
-nomeMenor=''
-for i in range(0, 1):
-    pessoa.append(input('Nome: '))
-    pessoa.append(input('Idade: '))
-    cont +=1
-    pessoa.clear()
-pessoas.append(pessoa[:])
-for p in pessoas:
-    if cont == 1:
-        numeroMaior = p[1]
-        numeroMenor = p[1]
-        nomeMaior=p[0]
-        nomeMenor=p[0]
-    elif p > numeroMaior:
-        numeroMaior = p[1]
-        nomeMaior=p[0]
-    elif p < numeroMenor:
-        numeroMenor = p[1]
-        nomeMenor=p[0]
+    while seisNumeros in jogos:
+        seisNumeros=''.join(random.choices(string.digits, k=6))
+    jogos.append(seisNumeros)
+    return seisNumeros
 
-print(f'{numeroMaior} e {nomeMaior}')
-print(f'{numeroMenor} e {nomeMenor}')
+print(jogos)
